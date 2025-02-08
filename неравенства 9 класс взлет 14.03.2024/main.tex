@@ -1,0 +1,96 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{Взлет}} \hfill {14.03.2024}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{9 класс}{Неравенства}
+	\bigskip
+
+\task Для плодительных $a, b, c$ докаэите неравенство $$\frac{a}{b +c} + \frac{b}{a + c} + \frac{c}{a + b} \geq \frac{3}{2}$$
+	
+\task Для любых $a, b, c > 0$, удовлетворяющих условию $abc = 1$, докажите, что $$(ab)^2 + (ac)^2 + (bc)^2 \geq a + b + c$$
+
+\task Положительные числа $x, y$ и $z$ таковы, что $xyz \geq xy +yz + xz$. Докажите неравенство $$\sqrt{xyz} \geq \sqrt{x} +\sqrt{y} + \sqrt{z}$$.
+
+\task Пусть $a, b$ и $c$ — положительные числа, такие, что $a + b + c = 3$. Докажите, что $$\frac{a}{1 + b^2} + \frac{b}{1 + 
+c^2} + \frac{c}{1 + a^2} \geq \frac{3}{2}$$
+
+\task Положительные числа $a, b, c$ удовлетворяют соотношению $ab + bc + ca = 3$. Докажите, что $$\sqrt{a + \frac{1}{a}} + \sqrt{b + \frac{1}{b}} + \sqrt{c + \frac{1}{c}} \geq 2 \left( \sqrt{a} + \sqrt{b} + \sqrt{c} \right)$$
+
+
+\task Пусть $a, b$ и $c$ — положительные числа, такие, что $ab + ac + bc = 3$. Докажите, что $$ \frac{a}{2a + b^2} + \frac{b}{2b + c^2} + \frac{c}{2c + a^2} \leq 1$$
+
+\task Пусть $a, b, c$ — положительные числа, сумма которых равна $1$. Докажите неравенство $$\frac{1}{1-a} + \frac{1}{1-b} + \frac{1}{1-c} \geq \frac{2}{1 + a} + \frac{2}{1 + b} + \frac{2}{1 + c}$$
+
+\task Даны числа $a, b, c$ не меньшие $1$. Докажите, что $$\frac{a + b + c}{4} \geq \frac{\sqrt{ab - 1}}{b + c} + \frac{\sqrt{bc - 1}}{c + a} + \frac{\sqrt{ca - 1}}{a + b}$$\\
+\\
+
+\end{document}

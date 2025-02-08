@@ -1,0 +1,95 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{кружок 5 лицей}} \hfill {15.04.2023}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{5 класс}{Взвешивания}
+	\bigskip
+	
+\task а) Перед вами $9$ монет, одна из них фальшивая (легче настоящих). Как за два взвешивания выяснить, какая монета фальшивая? б) Перед вами $81$ монета, одна из них фальшивая (легче настоящих). Сколько взвешиваний понадобится, чтобы выяснить, какая монета фальшивая? в) А если монет $10$, сколько взвешиваний понадобится?\\
+
+\task Среди $4$ одинаковых на вид монет есть одна фальшивая (более тяжелая). За какое минимальное количество взвешиваний можно найти фальшивую монету?\\
+
+\task Есть три монеты, одна из них фальшивая (но нам неизвестно, легче она или тяжелее, чем настоящие). Как выяснить, какая монета фальшивая? Обойдитесь как можно меньшим количеством взвешиваний.\\
+
+\task Петя задумал какое-то число от $1$ до $16$, а Коля пытается его отгадать. Он задаёт Пете вопросы, на которые тот отвечает только «ДА» или «НЕТ». Как Коле отгадать число за четыре вопроса?\\
+
+\task Лиса Алиса и Кот Базилио — фальшивомонетчики. Базилио делает монеты тяжелее настоящих, а Алиса — легче. У Буратино есть $15$ одинаковых по внешнему виду монет, но какая-то одна — фальшивая. Как двумя взвешиваниями на чашечных весах без гирь Буратино может определить, кто сделал фальшивую монету — Кот Базилио или Лиса Алиса? (Находить монету не надо.)\\
+
+\task С помощью трех гирь продавец может взвесить любое целое число килограммов от $1$ до $10$ включительно. Какими гирями располагает продавец\\
+
+\task Из пяти монет две фальшивые. Одна из фальшивых монет легче настоящей, а другая — на столько же тяжелее настоящей. Объясните, как за три взвешивания на чашечных весах без гирь найти обе фальшивые монеты.\\
+
+\task Известно, что «медные» монеты достоинством в $1, 2, 3, 5$ коп. весят соответственно $1, 2, 3, 5$ г. Среди четырех «медных» монет (по одной каждого достоинства) есть одна бракованная, отличающаяся весом от нормальной. Как с помощью двух взвешиваний на чашечных весах без гирь определить бракованную монету?\\
+
+\task  Золотоискатель добыл 9 кг песка. Ему надо отмерить $2$ кг песка с помощью весов с двумя чашами и одной гирей — $200$ г. Как это сделать за $3$ взвешивания? Если мы добиваемся равновесия путем пересыпания песка — это одно взвешивание. Есть пакеты для хранения песка.\\
+
+\end{document}
