@@ -1,0 +1,91 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{взлет МО}} \hfill {11.09.2023}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{9 класс}{Двойной подсчет}
+	\bigskip
+	
+\task Можно ли занумеровать рёбра куба натуральными числами от $1$ до $12$ так, чтобы для каждой вершины куба сумма номеров рёбер, которые в ней сходятся, была одинаковой?\\
+
+\task Тридцать школьников — семиклассников и восьмиклассников — обменялись рукопожатиями. При этом оказалось, что каждый семиклассник пожал руку восьми восьмиклассникам, а каждый восьмиклассник пожал руку семи семиклассникам. Сколько было семиклассников и сколько восьмиклассников?\\
+
+\task Дано $3003$ числа. Известно, что сумма любых четырёх чисел положительна. Верно ли, что сумма всех чисел положительна?\\
+
+\task По кругу расставлены цифры $1, 2, 3, . . . , 9$ в произвольном порядке. Каждые три цифры, стоящие подряд по часовой стрелке, образуют трёхзначное число. Найдите сумму всех девяти таких чисел.\\
+
+\task Обозначим через $d_{k}$ количество таких домов в Москве, в которых живет не меньше $k$ жителей, и через $c_{m}$ - количество жителей в $m$-ом по величине населения доме. Докажите равенство $c_{1}+c_{2}+c_{3}+... = d_{1}+d_{2}+d_{3}+...$ .\\
+
+\task Во взводе $10$ человек. В каждый из $100$ дней какие-то четверо назначались дежурными. Докажите, что какие-то двое были вместе на дежурстве не менее $14$ раз.\\
+
+\task Дан набор, состоящий из таких $2023$ чисел, что если каждое число в наборе заменить на сумму остальных, то получится тот же набор. Докажите, что произведение чисел в наборе равно $0$.\\
+
+\end{document}

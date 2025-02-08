@@ -1,0 +1,93 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{Взлет}} \hfill {12.03.2024}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{9 класс}{Алгебра}
+	\bigskip
+
+\task Числа $a, b, c$ и $d$ удовлетворяют соотношению $a^2 + b^2 + (a + b)^2 = c^2 +d^2 +(c+d)^2$. Докажите, что $a^4 +b^4 +(a+b)^4 = c^4 +d^4 +(c+d)^4$.\\
+
+\task Известно, что квадратные уравнения $ax^2 +bx+c = 0$ и $bx^2 + cx+a = 0 , \ (a,b$ и $c$ – отличные от нуля числа) имеют общий корень. Найдите его.\\
+
+\task Найдите все такие числа $a$, что для любого натурального $n$ число $an(n + 2)(n + 4)$ будет целым.\\
+
+\task Известно, что $x + 1$ – целое число. Докажите, что $x^n + \frac{1}{x^{n}}$ – также целое при любом целом $n$.\\
+
+\task Существуют ли различные натуральные числа $a, b, c$, большие миллиарда, такие, что их произведение делится на любое из них, увеличенное на $2024$?\\
+
+\task В таблицу $10 \times 10$ записаны положительные числа так, что в любой строке числа образуют арифметическую прогрессию (в порядке следования слева направо), а в любом столбце — геометрическую прогрессию (в порядке следования сверху вниз). Докажите, что знаменатели всех этих геометрических прогрессий равны.\\
+ 
+\task При каком наименьшем натуральном $n$ существуют такие целые $a_{1}, a_{2} \dots a_{n}$, что уравнение $$x^{2} - 2(a_{1} + a_{2} + \dots + a_{n})^{2}x + (a_{1}^{4} + a_{2}^{4} + \dots + a_{n}^{4} + 1)$$ имеет по крайней мере один целый корень?\\
+
+\task Изначально на доске был записан $n+1$ одночлен: $1, \ x, \ x^{2} \dots x^{n}$. Договорившись заранее, $k$ мальчиков каждую минуту одновременно вычисляли сумму каких-то двух многочленов, написанных на доске, и результат дописывали на доску. Через $m$ минут на доске, среди прочих, были написаны многочлены $S_{1} = 1 + x, \ S_{2} = 1 + x + x^{2},  \dots S_{n} = 1 + x + \dots + x^{n}$. Докажите, что $m \geq \frac{2n}{k+1}$.\\
+
+\end{document}

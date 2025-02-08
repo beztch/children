@@ -1,0 +1,100 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{взлет МО}} \hfill {10.10.2023}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{7а класс}{матИгры}
+	\bigskip
+	
+\task Имеются две кучки камней по $200$ штук в каждой. За ход разрешается брать любое количество камней, но только из одной кучки. Проигрывает тот, кому нечего брать. Кто выиграет при правильной игре?
+\\
+
+\task Имеются две кучки камней, в одной $200$ штук, во второй - $300$. За ход разрешается брать любое количество камней, но только из одной кучки. Проигрывает тот, кому нечего брать. Кто выиграет при правильной игре?
+\\
+
+\task Камушки лежат в одиннадцати кучах. В каждой куче по $30$ камней. За один ход можно взять любое число камней из любой одной кучи. Кто выигрывает при правильной игре?
+\\
+
+\task На концах клетчатой полоски $1 \times 20$ стоит по шашке. Играют двое; за ход разрешается сдвинуть одну шашку в направлении другой на одну или на две клетки. Перепрыгивать шашкой через шашку нельзя. Проигрывает тот, кто не может сделать ход. Кто выиграет при правильной игре?
+\\
+
+\task Есть а) $100$  б) $102$ сырника. Два игрока съедают по-очереди от $1$ до $4$ сырников. Выиграет тот, кто съест последний сырник. Кто выиграет при правильной игре?
+\\
+
+\task Петя и Вася играют в игру. У них есть $2020$ бананов. Сначала Вася распределяет бананы по трем кучам, в каждую хотя бы по одному банану. Затем они делают ходы по очереди, начинает Петя. За один ход можно взять из одной кучи $1$, $2$ или $3$ банана. Проигрывает не имеющий хода. Кто выигрывает при правильной игре?\\
+
+\task  а) В строчку написано несколько минусов. Два игрока по очереди переправляют один или два соседних минуса на плюс; выигрывает переправивший последний минус.
+
+б) Рассмотрите вариант предыдущей игры, в котором минусы написаны не в строчку, а стоят по кругу (и исправлять можно один или два стоящих рядом минуса)\\
+
+\task Двое играют на доске а)$2000 \times 22$ б)$2000 \times 23$ клеток. Каждый по очереди отмечает квадрат по линиям сетки (любого возможного размера) и закрашивает его. Выигрывает тот, кто закрасит последнюю клетку. Дважды закрашивать клетки нельзя. Кто выиграет при правильной игре и как надо играть?\\
+
+\end{document}

@@ -1,0 +1,99 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{взлет}} \hfill {01.10.2024}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=280mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{группа 7.2}{Рыцари и не рыцари}
+	\bigskip
+
+\task Давным давно островитянин Дерб сказал своим друзьям: - Вчера мой сосед заявил мне, что он лжец! Кем является Дерб — рыцарем или лжецом?\\
+
+\task Как-то раз встретились два островитянина и один сказал другому: «По крайней мере один из нас – лжец». История умалчивает, ответил ли ему на это что-либо собеседник. Тем не менее определите, кем являются оба.\\
+
+\task Первый островитянин говорит второму: “Я лжец или ты рыцарь”. Кто из островитян кто?\\
+
+\task В круг встали $10$  островитян. Каждый из них заявил, что следующие четверо после него — тролли. Сколько всего троллей среди них?\\
+ 
+\task За круглым столом сидели $99$ человек, каждый из которых либо рыцарь, который всегда говорит правду, либо лжец, который всегда лжёт. Каждый из них сказал: «Хотя бы один из двух моих соседей — лжец.» Могло ли среди них быть ровно $60$ рыцарей?\\
+
+\task Однажды в четверг после дождя между островитянами Тимом и Томом произошел следующий диалог: - Ты можешь сказать, что я рыцарь, - гордо заявил Тим. - Ты можешь сказать, что я лжец, - грустно ответил ему Том. Кем являются Тим и Том?\\
+
+\task Все жители острова либо рыцари и говорят только правду, либо лжецы и всегда лгут. Путешественник встретил пятерых островитян. На его вопрос: «Сколько среди вас рыцарей?» первый ответил: «Ни одного!», а двое других ответили: «Один». Что ответили остальные?\\
+
+\task За круглым столом сидят $100$ человек. Каждый из них либо рыцарь, либо лжец, либо чудак. Рыцарь всегда говорит правду, лжец всегда лжет. Чудак говорит правду, если слева от него сидит лжец; ложь, если слева от него сидит рыцарь; все что угодно, если слева от него сидит чудак. Каждый сказал: «Справа от меня сидит лжец». Сколько за столом лжецов? Перечислите все возможные ответы и докажите, что других нет. \\
+
+Докажем это утверждение индукцией по количеству прямых.
+
+{\bf База индукции.} Пусть на плоскости проведена всего одна прямая, которая делит эту плоскость на две части. Одну из этих частей покрасим в белый цвет, а другую — в черный. Тогда требование условия будет выполнено.
+
+{\bf Шаг индукции.} Пусть на плоскости проведено k прямых, и части плоскости раскрашены в черный и белый цвета требуемым образом. Проведем (k + 1)-ую прямую. Все части плоскости по одну сторону от этой новой прямой перекрасим в противоположные цвета, а по другую сторону оставим все без изменений (см. рисунок). Убедитесь, что в этом случае части плоскости будут раскрашены требуемым образом.
+
+\end{document}

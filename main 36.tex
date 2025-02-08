@@ -1,0 +1,94 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{5 лицей}} \hfill {21.12.2023}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{6 класс}{Разнобой}
+	\bigskip
+	
+\task В Стране дураков ходят монеты в $1, 2, 3, . . . , 19, 20$ сольдо (других нет). У Буратино была одна монета. Он купил мороженое и получил одну монету сдачи. Снова купил такое же мороженое и получил сдачу тремя монетами разного достоинства. Буратино хотел купить третье такое же мороженое, но денег не хватило. Сколько стоит мороженое?\\
+
+\task Саша и Ваня родились $19$ марта. Каждый из них отмечает свой день рождения тортом со свечками по количеству исполнившихся ему лет. В тот год, когда они познакомились, у Саши на торте было столько же свечек, сколько у Вани сегодня. Известно, что суммарное количество свечек на четырёх тортах Вани и Саши (тогда и сегодня) равно $216$. Сколько лет исполнилось Ване сегодня?
+\\
+
+\task В большой квадратный зал привезли два квадратных ковра, сторона одного ковра вдвое больше стороны другого. Когда их положили в противоположные углы зала, они в два слоя накрыли $4$ м$^{2}$, а когда их положили в соседние углы, то $14$ м$^{2}$. Каковы размеры зала?\\
+
+\task Петров забронировал квартиру в доме-новостройке, в котором пять одинако- вых подъездов. Изначально подъезды нумеровались слева направо, и квар- тира Петрова имела номер $636$. Потом застройщик поменял нумерацию на противоположную. Тогда квартира Петрова стала иметь номер $242$. Сколько квартир в доме? (Порядок нумерации квартир внутри подъезда не изменялся.)\\
+
+\task Можно ли в равенстве $\frac{*}{*} + \frac{*}{*} + \frac{*}{*} + \frac{*}{*} + = *$ заменить звездочки цифрами от $1$ до $9$, взятыми по одному разу, так, чтобы равенство стало верным?\\
+
+\task Четыре внешне одинаковые монетки весят $1, 2, 3$ и $4$ грамма. Можно ли за четыре взвешивания на чашечных весах без гирь узнать, какая из них сколько весит?\\
+
+\task Два пирата, Билл и Джон, имея каждый по $74$ золотые монеты, решили сыг- рать в такую игру: они по очереди будут выкладывать на стол монеты, за один ход — одну, две или три, а выиграет тот, кто положит на стол сотую по счёту монету. Начинает Билл. Кто может выиграть в такой игре, независимо от того, как будет действовать соперник?\\
+
+\task В каждой клетке доски размером $5 \times 5$ стоит крестик или нолик, причём никакие три крестика не стоят подряд ни по горизонтали, ни по вертикали, ни по диагонали. Какое наибольшее количество крестиков может быть на доске?\\
+
+\end{document}

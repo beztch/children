@@ -1,0 +1,95 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{Взлет сборы}} \hfill {09.11.2023}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{9 класс}{Кон. По. Ин.}
+	\bigskip
+	
+\task Докажите, что для любого $n$ найдется $n$ подряд идущих составных чисел.\\
+
+\task Докажите, что для любого $k$ найдется квадратная клетчатая доска, на которой можно расставить $k$ не бьющих друг друга ферзей.\\
+
+\task От прямоугольника с неравными сторонами отрезают квадрат со стороной, равной меньшей стороне прямоугольника. Если оставшаяся часть не квадрат, процесс повторяют. Докажите, что для любого $n$ найдется прямоугольник, для которого процесс закончится ровно после $n$-го отрезания, причем все отрезанные квадраты будут разного размера.\\
+
+\task На столе стоят $2^{n}$ стаканов с водой. Разрешается взять один из стаканов и перелить из него часть воды в стакан, где воды меньше так, чтобы воды стало поровну. Докажите, что такими операциями можно добиться, чтобы во всех стаканах стало поровну воды.\\
+
+\task На клетчатой доске стоит $n$ ферзей. Докажите, что их можно раскрасить в $5$ цветов так, чтобы ферзи одного цвета друг друга не били.\\
+
+\task Докажите, что для любого $n$ найдется убывающая арифметическая прогрессия из $n$ членов вида $\frac{1}{k}$.\\
+
+\task На доске выписаны числа $1, 2^{1}, 2^{2}, 2^{3}, ..., 2^{n}$. Разрешается стереть любые два числа и вместо них выписать их разность – неотрицательное число. После нескольких таких операций на доске будет только одно число. Чему оно может быть равно?\\
+
+\task В шахматном турнире каждый с каждым сыграли по разу. Докажите, что можно так занумеровать участников, чтобы каждый не проиграл участнику со следующим номером.\\
+
+\task Имеется много карточек, на каждой из которых записано натуральное число от $1$ до $n$. Известно, что сумма чисел на всех карточках равна  $n! \cdot k$,  где $k$ – целое число. Доказать, что карточки можно разложить на $k$ групп так, чтобы в каждой группе сумма чисел, написанных на карточках, равнялась $n!$\\
+
+\end{document}

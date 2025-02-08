@@ -1,0 +1,93 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{Взлет}} \hfill {16.03.2024}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{8 класс $\bullet$ 1 группа}{ТЧ Оценочки}
+	\bigskip
+
+\task Натуральное число называется палиндромом, если оно одинаково читается слева направо и справа налево (в частности, последняя цифра палиндрома совпадает с первой и потому не равна нулю). Квадраты двух различных натуральных чисел имеют по $1001$ цифре. Докажите, что строго между этими квадратами на числовой прямой найдется палиндром.\\
+
+\task Дано натуральное число $N$. На доске написаны числа от $N^3$ до $N^3 + N$. Среди них $a$ чисел покрасили в красный цвет, а какие-то $b$ из остальных — в синий. Оказалось, что, что сумма красных чисел делится на сумму синих. Докажите, что $a$ делится на $b$.\\
+
+\task Натуральные числа $d$ и $d′ > d$ — делители натурального числа $n$. Докажите, что $d′ > d + \frac{d^2}{n}$.\\
+
+\task Решите уравнение в натуральных числах $x \cdot y! + 2y \cdot x! = z!$\\
+
+\task Найдите все пары натуральных чисел $m, n$ такие, что $m^4 + m$ делится на $m^2 - n$ и $n^4 + n$ делится на $n^2 - m$.\\
+
+
+\task Натуральные числа $a, x$ и $y$, большие $100$, таковы, что $y^2 - 1 = a^2(x^2 - 1)$. Какое наименьшее значение может принимать дробь $\frac{a}{x}$?\\
+
+\task На доске написали строку из ста попарно различных натуральных чисел. Затем под каждым числом написали сумму этого числа и НОДа всех остальных. Какое наименьшее количество попарно различных чисел может оказаться в нижней строке?\\
+
+\task Для натурального числа $n$ обозначим через $C(n)$ сумму его различных простых делителей. Например, $C(2) = 2, C(45) = 8$. Найдите все нечётные $n$ такие, что $C(2n + 1) = C(n)$.\\
+\end{document}

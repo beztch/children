@@ -1,0 +1,95 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{5 школа}} \hfill {13.05.2023}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{5 класс}{Разумный перебор}
+	\bigskip
+	
+\task Сколько существует двузначных чисел, у которых цифра десятков больше цифры единиц?\\
+
+\task В слове 222122111121 каждая буква заменена своим номером в русском алфавите. Какое слово зашифровано?\\
+
+\task В коробке лежат синие, красные и зеленые карандаши. Всего $20$ штук. Синих в $6$ раз больше, чем зеленых, красных меньше, чем синих. Сколько в коробке красных карандашей?\\
+
+\task Кузнечик прыгает вдоль прямой вперёд на $80$ см или назад на $50$ см. Может ли он менее чем за $7$ прыжков удалиться от начальной точки ровно на $1$ м $70$ см?\\
+
+\task После хоккейного матча Антон сказал, что он забил $3$ шайбы, а Илья только одну. Илья сказал, что он забил $4$ шайбы, а Серёжа целых $5$. Серёжа сказал, что он забил $6$ шайб, а Антон всего лишь две. Могло ли оказаться так, что втроём они забили $10$ шайб, если известно, что каждый из них один раз сказал правду, а другой раз солгал?\\
+
+\task Четыре друга пришли с рыбалки. Каждые двое сосчитали суммы своих уловов. Получилось шесть чисел: $7$, $9$, $14$, $14$, $19$, $21$. Сможете ли Вы узнать, каковы были уловы?\\
+
+\task Миша выписал подряд все числа месяца: $123456789101112$... и покрасил три дня (дни рождения своих друзей), никакие два из которых не идут подряд. Оказалось, что все непокрашенные участки состоят из одинакового количества цифр. Докажите, что первое число месяца покрашено.\\
+
+\task На гранях кубика расставлены числа от $1$ до $6$. Кубик бросили два раза. В первый раз сумма чисел на четырёх боковых гранях оказалась равна $12$, во второй — $15$. Какое число написано на грани, противоположной той, где написана цифра $3$?\\
+
+\task Студент за $5$ лет обучения сдал 31 экзамен. В каждом следующем году он сдавал больше экзаменов, чем в предыдущем, а на пятом курсе сдал втрое больше экзаменов, чем на первом курсе. Сколько экзаменов он сдал на четвертом курсе?\\
+
+\end{document}

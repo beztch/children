@@ -1,0 +1,92 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{взлет МО}} \hfill {12.09.2023}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{8 класс}{Упорядочивание и усреднение}
+	\bigskip
+	
+\task Лёша задумал четыре числа, а затем для каждой из шести пар чисел вы- числил их разность. Могли ли у него получиться разности $2, 3, 3, 4, 5, 6$?\\
+
+\task В вершинах $2023$-угольника расставлены числа так, что каждое равно среднему арифметическому своих соседей. Докажите, что все они равны.\\
+
+\task Пешеход шёл $2,5$ часа, причём за каждый промежуток времени в один час он проходил ровно $5$ км. Следует ли из этого, что его средняя скорость за всё время равна $5$ км/час?
+\\
+
+\task Есть $20$ карандашей, каждый из которых покрашен в один из $10$ цветов (по два карандаша каждого цвета). Они разложены в 10 коробок по $2$.  Докажите, можно выбрать по карандашу из каждой коробки так, чтобы все они были разных цветов.\\
+
+\task На дискотеке $n$ юношей танцевали с $n$ девушками. В каждой паре юноша был выше девушки, но не более, чем на $10$ см. Докажите, что если поставить танцевать самого высокого юношу с самой высокой девушкой, второго по росту — со второй, и т. д., то по прежнему в каждой паре юноша будет выше девушки и опять же не более, чем на $10$ см.\\
+
+\task Учитель провёл контрольную в двух классах $8$«A» и $8$«Б» и сосчитал рейтинг каждого класса как среднее арифметическое оценок, полученных учениками этого класса. „Вот если бы Вася учился не в $8$«Б», а в $8$«A», то рейтинг обоих классов был бы выше“ — начал мечтать учитель. Не перегрелся ли учитель, проверяя контрольные?\\
+
+\task Две окружности равного радиуса разделены на 100 равных дуг каждая. На каждой окружности $50$ дуг покрашено в красный цвет, а $50$ — в синий. Докажите, что окружности можно совместить наложением так, чтобы цвета дуг совпали хотя бы в $50$ местах.\\
+
+\end{document}

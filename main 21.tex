@@ -1,0 +1,94 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{взлет}} \hfill {18.01.2024}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{текст поменньше}{Текст}
+	\bigskip
+	
+\task На стол положили (с перекрытиями) несколько одинаковых салфеток, имеющих форму правильного шестиугольника, причем у всех салфеток одна сторона параллельна одной и той же прямой. Всегда ли можно вбить в стол несколько гвоздей так, что все салфетка будут прибиты, причем каждая - только одним гвоздем?\\
+
+\task Докажите, что найдется такое натуральное число $n > 1$, что произведение некоторых $n$ последовательных натуральных чисел равно произведению некоторых $n + 100$ последовательных натуральных чисел. \\
+
+\task Сначала Саша прямолинейными разрезами, каждый из которых соединяет две точки на сторонах квадрата, делит квадрат со стороной $2$ на $2023$ частей. Затем Дима вырезает из каждой части по кругу. Докажите, что Дима всегда может добиться того, чтобы сумма радиусов этих кругов была не меньше $1$. \\
+
+\task Найдите все натуральные числа, которые можно представить ввиде $\frac{xy+yz+zx}{}x + y + z$,где $х,у$ и $z$ —три различных натуральных числа. \\
+
+\task  Постройте арифметическую прогрессию из $10000$ натуральных чисел, такую что суммы цифр этих чисел также образуют арифметическую прогрессию.\\
+
+\task В ряд стоят $23$ коробочки с шариками, причём для каждого числа $n$ от $1$ до $23$ есть коробочка, в которой ровно $n$ шариков. За одну операцию можно переложить в любую коробочку еще столько же шариков, сколько в ней уже есть, из какой-нибудь другой коробочки, в которой шариков больше. Всегда ли можно такими операциями добиться, чтобы в первой коробочке оказался $1$ шарик, во второй – $2$ шарика, и так далее, в $23$-й – $23$ шарика?\\
+
+\task В квадратной таблице $2021 \times 2023$ стоят натуральные числа. Можно выбрать любой столбец или любую строку в таблице и выполнить одно из следующих действий: 1) Прибавить к каждому выбранному числу $1$. 2) Разделить каждое из выбранных чисел на какое-нибудь натуральное число. Можно ли за несколько таких действий добиться того, чтобы каждое число в таблице было равно $1$?\\
+
+\task В игре "Десант" две армии захватывают страну. Они ходят по очереди, каждым ходом занимая один из свободных городов. Первый свой город армия захватывает с воздуха, а каждым следующим ходом она может захватить любой город, соединённый дорогой с каким-нибудь уже занятым этой армией городом. Если таких городов нет, армия прекращает боевые действия (при этом, возможно, другая армия свои действия продолжает). Найдётся ли такая схема городов и дорог, что армия, ходящая второй, сможет захватить более половины всех городов, как бы ни действовала первая армия?
+\\
+
+\end{document}

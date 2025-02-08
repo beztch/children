@@ -1,0 +1,95 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{5 школа сборы к ВСОШ}} \hfill {Казанцева Татьяна}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1 $\bullet$ 14.04.2023}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{9 класс}{Разнобой}
+	\bigskip
+
+\task Приведенный квадратный трехчлен $P(x)$ таков, что $P(x)$ и $P(P(P(x)))$ имеют общий корень. Докажите, что $P(0) \cdot P(1) = 0$. \\
+
+\task Петя загадал натуральное число $N$, Вася хочет его отгадать. Петя сначала говорит сумму цифр числа $N+1$, затем $N+2$, $N+3$ и так далее. Сможет ли Вася угадать Петино число? \\
+	
+\task Многочлены $F$ и $G$ таковы, что $$F(F(x)) > F(G(x)) > G(G(x))$$ для всех вещественных $x$. Докажите, что $F(x) > G(x)$ для всех вещественных $x$.\\
+
+\task По кругу сидит $101$ человек, каждый из которых либо физик, либо астроном. Каждую минуту человек, оба соседа которого увлекаются противоположной наукой, меняет свой род деятельности на противоположный, а остальные не меняют. Докажите, что в какой-то момент смены прекратятся.\\ 
+
+\task На сторонах $AB$, $BC$ и $AC$ треугольника $ABC$ выбраны точки $C_{1}$, $A_{1}$ и $B_{1}$ соответственно так, что $A_{1}C_{1} \parallel AC$ и $A_{1}B_{1} \parallel AB$. Прямая $B_{1}C_{1}$ пересекает окружность $(ABC)$ в точках $D$ и $E$. Докажите, что описанная окружность треугольника $A_{1}DE$ касается прямой $BC$.\\
+
+\task Остроугольный треугольник $ABC$ вписан в окружность $\omega$. Касательные, проведенные к $\omega$ в точка $B$ и $C$ пересекаются в точке $P$. Точки $D$ и $E$ -- основания перпендикуляров из точки $P$ на $AB$ и $AC$ соответственно. Докажите, что высоты треугольника $ADE$ пересекаются в середине стороны $BC$.\\
+
+\task Некто угнал старую полицейскую машину (скорость которой составляет a) $90\%$ б) $x\%$ от скорости новой) и поехал на ней в каком-то направлении по бесконечной в обе стороны дороге. Спустя какое-то время полицейские устроили погоню за ним на новой машине, но они не знают в какую он поехал сторону. Смогут ли они поймать гонщика?\\
+
+\task На плоскости отмечено $N \geqslant 3$\ различных точек. Известно, что среди попарных расстояний между этими точками не более $n$ различных. Докажите, что $N \leqslant (n + 1)^{2}$.\\
+
+\task В полном графе на $101$ вершине на каждом ребре поставлено число $+1$ или $−1$. Известно, что сумма чисел на всех ребрах по модулю меньше $150$. Докажите, что в графе найдется путь с нулевой суммой чисел на ребрах, проходящий по всем вершинам ровно по одному разу.\\
+
+\end{document}

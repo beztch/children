@@ -1,0 +1,92 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{5 лицей}} \hfill {05.10.2023}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{6 класс}{Движение}
+	\bigskip
+	
+\task Из дома Юра вышел на $5$ минут позже Лены, но шёл со скоростью в два раза большей, чем она. Через какое время Юра догонит Лену?\\
+
+\task Собаки Жучка и Полкан увидели друг друга во дворе и одновременно побежали навстречу друг другу. Через $5$ с, когда между ними оставалось $6$ м, Жучка испугалась и встала как вкопанная, а Полкан ещё через $2$ с подбежал к ней и поприветствовал. На каком расстоянии находились собаки, когда увидели друг друга, если Полкан бегает втрое быстрее Жучки?\\
+
+\task Буратино и Пьеро бежали наперегонки. Пьеро весь путь бежал с одной и той же скоростью, а Буратино первую половину пути бежал вдвое быстрее, чем Пьеро, а вторую половину – вдвое медленней, чем Пьеро. Кто победил?\\
+
+\task Бенедикт и Франциск красят забор. Каждый из них по отдельности может покрасить забор за $8$ часов. Забор начал красить Бенедикт, а спустя $2$ часа к нему присоединился Франциск. За сколько часов был покрашен весь забор?\\
+
+\task Ванна заполняется холодной водой за $6$ минут $40$ секунд, горячей — за $8$ минут. Кроме того, если из полной ванны вынуть пробку, вода вытечет за $13$ минут $20$ секунд. Сколько времени понадобится, чтобы наполнить ванну полностью, при условии, что открыты оба крана, но ванна не заткнута пробкой?\\
+
+\task Пони и ослик бегали с постоянными скоростями по кругу длиной $100$ м. Пони каждые две минуты обгонял ослика. Когда ослик вдвое увеличил скорость, он сам стал каждые две минуты обгонять пони. С какими скоростями бегали пони и ослик изначально?\\
+
+\task Товарный поезд, отправившись из Москвы в $x$ часов $y$ минут, прибыл в Саратов в $y$ часов $z$ минут. Время в пути составило $z$ часов $x$ минут. 
+Найдите все возможные значения $x$.\\
+
+\end{document}

@@ -1,0 +1,96 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{Взлет}} \hfill {31.03.2024}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{10 класс}{Алгебра}
+	\bigskip
+
+\task \task Квадратный трёхчлен $P(x)$ с единичным старшим коэффициентом таков, что многочлены $P(x)$ и $P(P(P(x)))$ имеют общий корень. Докажите, что $P(0) \cdot P(1) = 0$.\\
+
+\task В каждой точке плоскости $A$ стоит вещественное число $f(A)$. Известно, что если $M$ -- точка пересечения медиан треугольника $ABC$, то $f(M) = f(A) + f(B) + f(C)$. Докажите, что $f(A) = 0$ для всех точек $A$.\\
+
+\task Найдите все такие натуральные n, что при некоторых отличных от нуля действительных числах a, b, c, d многочлен $$(ax + b)^{1000} - (cx + d)^{1000}$$ после раскрытия скобок и приведения всех подобных слагаемых имеет ровно $n$ ненулевых коэффициентов.\\
+
+\task Действительные числа $a, b, c, d$, по модулю большие единицы, удовлетворяют соотношению
+$abc + abd + acd + bcd + a + b + c + d = 0$. Докажите, что $$\frac{1}{a - 1} + \frac{1}{b - 1} + \frac{1}{c - 1} + \frac{1}{d - 1} > 0.$$
+
+\task Любые два из действительных чисел $a_1, a_2, a_3, a_4, a_5$ отличаются хотя бы на один. Для некоторого натурального $k$ выполнены равенства $a_1 + a_2 + a_3 + a_4 + a_5 = 2k$ и $a_1^2 + a_2^2 + a_3^2 + a_4^2 + a_5^2 = 2k^2$. Доувжите, что $k^2 \geq \frac{25}{3}.$\\
+
+\task Дана функция $f$, определённая на множестве действительных чисел и принимающая действительные значения. Известно, что для любых $x$ и $y$ таких, что $x > y$, верно неравенство $(f(x))^2 \leq f(y)$. Докажите, что множество значений функции содержится в промежутке $[0, 1]$.\\
+
+\task Сколько раз функция  $$f(x)=\cos x \cdot \cos \frac{x}{2} \cdot \cos \frac{x}{3} \cdot \dots \cdot \cos \frac{x}{2024}$$ меняет знак на отрезке $[0, \frac{2024 \pi}{2}]$?\\
+ 
+\task Дано натуральное число $n \geq 3$. При каком наименьшем $k$ верно следующее утверждение? Для любых $n$ точек $A_i = (x_i,y_i)$ на плоскости, никакие три из которых не лежат на одной прямой и любых вещественных чисел $c_i (1 \leq i \leq n)$ существует такой многочлен $P(x, y)$, степень которого не больше $k$, что $P(x_i , y_i ) = c_i$  при всех $i = 1 \dots n$. \\
+
+\task Натуральные числа $a, x$ и $y$, большие $100$, таковы, что $y^2 - 1 = a^2(x^2 - 1).$ Какое наименьшее значение может принимать дробь $\frac{a}{x} $?\\
+
+\end{document}

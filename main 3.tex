@@ -1,0 +1,93 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{Взлет}} \hfill {29.03.2024}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{9 класс}{Алгебра}
+	\bigskip
+
+\task  Знаменатели двух несократимых дробей равны $600$ и $700$. Найдите наименьшее возможное значение знаменателя их суммы (в несократимой записи).\\
+
+\task Найдите все такие натуральные n, что при некоторых отличных от нуля действительных числах a, b, c, d многочлен $$(ax + b)^{1000} - (cx + d)^{1000}$$ после раскрытия скобок и приведения всех подобных слагаемых имеет ровно $n$ ненулевых коэффициентов.\\
+
+\task Квадратный трёхчлен $P(x)$ с единичным старшим коэффициентом таков, что многочлены $P(x)$ и $P(P(P(x)))$ имеют общий корень. Докажите, что $P(0) \cdot P(1) = 0$.\\
+
+\task Серёжа выбрал два различных натуральных числа $a$ и $b$. Он записал в тетрадь четыре числа: $a, a + 2, b$ и $b + 2$. Затем он выписал на доску все шесть попарных произведений чисел из тетради. Какое наибольшее количество точных квадратов может быть среди чисел на доске?\\
+
+\task Дана функция $f$, определённая на множестве действительных чисел и принимающая действительные значения. Известно, что для любых $x$ и $y$ таких, что $x > y$, верно неравенство $(f(x))^2 \leq f(y)$. Докажите, что множество значений функции содержится в промежутке $[0, 1]$.\\
+
+\task Сколько раз функция  $$f(x)=\cos x \cdot \cos \frac{x}{2} \cdot \cos \frac{x}{3} \cdot \dots \cdot \cos \frac{x}{2024}$$ меняет знак на отрезке $[0, \frac{2024 \pi}{2}]$?\\
+ 
+\task На доске написаны девять приведённых квадратных трёхчленов: $x^2 +a_1x+b_1, x^2 +a_2x+b_2 \dots x^2 +a_9x+b_9$. Известно, что последовательности $a_1, a_2 \dots a_9$ и $b_1, b_2 \dots b_9$ -- арифметические прогрессии. Оказалось, что сумма всех девяти трёхчленов имеет хотя бы один корень. Какое наибольшее количество исходных трёхчленов может не иметь корней?\\
+
+\task Натуральные числа $a, x$ и $y$, большие $100$, таковы, что $y^2 - 1 = a^2(x^2 - 1).$ Какое наименьшее значение может принимать дробь $\frac{a}{x} $?\\
+
+\end{document}

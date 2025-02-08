@@ -1,0 +1,93 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{Взлет}} \hfill {05.04.2024}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{10 класс}{Неравенства в тч}
+	\bigskip
+
+\task Натуральное число называется палиндромом, если оно одинаково читается слева направо и справа налево (в частности, последняя цифра палиндрома совпадает с первой и потому не равна нулю). Квадраты двух различных натуральных чисел имеют по 1001 цифре. Докажите, что строго между этими квадратами на числовой прямой найдется палиндром.\\
+
+\task На доске написаны $n > 3$ различных натуральных чисел, меньших, чем $(n - 1)! = 1 \cdot 2 \cdot \dots \cdot (n - 1)$. Для каждой пары этих чисел Серёжа поделил большее на меньшее с остатком и записал в тетрадку полученное неполное частное (так, если бы он делил $100$ на $7$, то он бы получил $100 = 14 \cdot 7 + 2$ и записал бы в тетрадку число $14$). Докажите, что среди чисел в тетрадке найдутся два равных.\\
+
+\task Пусть $a_1, a_2 \dots a_{10}$ -- различные натуральные числа, не меньшие трех, сумма которых равна $678$. Могло ли оказаться, что сумма остатков от деления некоторого натурального числа $n$ на $20$ чисел $a_1, a_2 \dots a_{10}, 2a_{1} \dots 2a_{10}$ равна $2012$?\\
+
+\task Найдите все пары натуральных чисел $m, n$ такие, что $m^4 + m$ делится на $m^2 - n$ и $n^4 + n$ делится на $n^2 - m$. \\
+
+\task На доске написали строку из ста попарно различных натуральных чисел. Затем под каждым числом написали сумму этого числа и НОДа всех остальных. Какое наименьшее количество попарно различных чисел может оказаться в нижней строке?\\
+
+\task Саша выбрал натуральное число $N > 1$ и выписал в строчку в порядке возрастания все его натуральные делители: $d_1 < \dots < d_s$ (так что $d_1 = 1$ и $d_s = N$). Затем для каждой пары стоящих рядом чисел он вычислил их наибольший общий делитель; сумма полученных $s − 1$ чисел оказалась равной $N − 2$. Какие значения могло принимать $N$?\\
+ 
+\task Для натурального числа $n$ обозначим через $C(n)$ сумму его различных простых делителей. Например, $C(2) = 2, C(45) = 8$. Найдите все нечётные $n$ такие, что $C(2^n + 1) = C(n)$.\\
+
+\task Найдите все такие натуральные $k$, что произведение первых $k$ простых чисел, уменьшенное на единицу, является точной степенью.\\
+
+\end{document}

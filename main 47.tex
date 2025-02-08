@@ -1,0 +1,98 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{взлет МО}} \hfill {04.09.2023}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{9 класс}{Название}
+	\bigskip
+	
+\task Докажите, что существует $2023$-х значное число из цифр $2$ и $3$, делящееся на $2^{2023}$.\\
+
+\task Составьте из всех $10$ цифр такое число, что число, образованное его первыми двумя цифрами делится на $2$, первыми тремя делится на $3$ ... первыми десятью на $10$. \\
+
+\task Десять попарно различных ненулевых чисел таковы, что для каждых двух из них либо сумма этих чисел, либо их произведение -- рациональное число. Докажите, что квадраты всех чисел рациональны.\\
+
+\task Верно ли, что найдутся $4$ последовательных натуральных числа, каждое из которых является точной степенью?\\
+
+\task Нацдите все такие простые числа $p$ и $q$, что $pq - 555q$ и $pq + 555p$ явля/тся точными квадратами.\\
+
+
+\task Обозначим через $S_{n}$ сумму первых $n$ простых чисел. Докажите, что для любого $k$ между $S_{k}$ и $S_{k + 1}$ найдется точный квадрат.\\
+
+\task Докажите, что существует бесконечно много натуральных $n$ таких, что $n!$ делится на $n^{2} + 1$.\\
+
+\task Докажите, что найдется $10^{100}$ подряд идущих натуральных чисел, каждое из которых имеет простой делитель, не являющийся делителем никакого из остальных.\\
+
+\task На доску выписали все собственные делители некоторого натурального числа $n$, увеличенные на единицу. Найдите все такие $n$, что числа на доске являются всеми собственными делителями некоторого натурального числа $m$. (собственные делители числа $a > 1$ -- делители, отличные от $a$ и $1$).\\
+
+\task Обозначим через $[k]!$ произведение $1 \cdot 11 \cdot 111 \cdot ... \cdot 11...1$ ($k$ сомножителей). Докажите, что $[n + m]!$ делится на $[n]![m]!$.\\
+
+\end{document}

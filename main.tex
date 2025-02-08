@@ -1,0 +1,129 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{Взлет}} \hfill {02.04.2024}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{9 класс}{Странные задачи}
+	\bigskip
+
+\task  Для действительных чисел $a$, $b$, $c$ выполнены следующие неравенства:
+\[
+    (a - b + c) (4 a - 2 b + c) < 0
+\, , \qquad
+    c (a - b + c) < 0
+\, . \]
+Докажите, что для этих чисел выполнено неравенство
+$(a + b + c) (4 a + 2 b + c) \geq 0$.\\
+
+\task На~множестве всех целых неотрицательных чисел определена операция $\ast$,
+обладающая следующими свойствами:
+$0 \ast y = y + 1$,
+$(x + 1) \ast 0 = x \ast 1$,
+$(x + 1) \ast (y + 1) = x \ast ((x + 1) \ast y)$.
+\begin{itemize}
+    \item[a)] Найдите $3 \ast 2017$.
+    \item[b)] Найдите $4 \ast 2017$.
+\end{itemize}
+
+\task Докажите неравенство
+\(
+    \text{НОК}(a, b) \cdot \text{НОК}(b, c) \cdot \text{НОК}(a, c)
+\geq
+    \bigl( \text{НОК}(a, b, c) \bigr)^2
+\).\\
+
+\task На~множестве всех положительных чисел задана операция
+$m \circ n = \frac{m + n}{m n + 4}$.
+Найдите значение выражения
+$(\ldots((2016 \circ 2015) \circ 2014) \circ \ldots \circ 2) \circ 1$.\\
+
+\task На~множестве всех действительных чисел определена операция, обладающая
+следующим свойством: $(x \ast y) \ast z = x + y + z$.
+Докажите, что эта операция есть обычное сложение.\\
+
+\task Последовательность натуральных чисел $a_{n}$ построена так, что для любых
+$i \neq j$ выполнено свойство $\text{НОД}(a_i, a_j) = \text{НОД}(i, j)$.
+Докажите, что при всех $i$ выполнено $a_i = i$.\\
+ 
+\task Даны различные натуральные числа $a_1$, $a_2$, \ldots, $a_n$.
+Докажите, что НОК всех чисел
+\(
+    b_{i}
+=
+    (a_{i} - a_{1}) (a_{i} - a_{2}) \ldots
+    (a_{i} - a_{i-1}) (a_{i} - a_{i+1}) \ldots
+    (a_{i} - a_{n})
+\)
+делится на~$(n-1)!$.\\
+
+\task Докажите, что при любом натуральном $n$ можно указать $n$ последовательных натураль- ных чисел, среди которых нет ни одной степени натурального числа с показателем степени, большим $1$.\\
+
+\end{document}

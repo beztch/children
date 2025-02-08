@@ -1,0 +1,93 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{Взлет}} \hfill {09.03.2024}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{10 класс}{Алгебра}
+	\bigskip
+
+\task Существуют ли различные натуральные числа $a, b, c$, большие силлиарда, такие, что их произведение делится на любое из них, увеличенное на $2024$?\\
+
+\task На графике многочлена с целыми коэффициентами отмечены две точки с целыми координатами. Докажите, что если расстояние между ними — целое число, то соединяющий их отрезок параллелен оси абсцисс.\\
+
+\task Найдите количество корней уравнения $$|x| + |x+1| + \dots + |x + 2024| = x^{2} + 2024x - 2025.$$
+
+\task Докажите, что значение выражения не зависит от $x$: $$\frac{(x-a)(x-b)(x-c)}{(d-a)(d-b)(d-c)} + \frac{(x-b)(x-c)(x-d)}{(a-b)(a-c)(a-d)} + \frac{(x-c)(x-d)(x-a)}{(b-c)(b-d)(b-a)} + \frac{(x-d)(x-a)(x-b)}{(c-d)(c-a)(c-b)}$$.
+
+\task На координатной плоскости нарисованы графики двух приведённых квадратных трёхчленов и две непараллельные прямые $l_1$ и $l_2$. Известно, что отрезки, высекаемые графиками на $l_1$, равны, и отрезки, высекаемые графиками на $l_2$, также равны. Докажите, что графики трёхчленов совпадают.\\
+
+\task В таблицу $10 \times 10$ записаны положительные числа так, что в любой строке числа образуют арифметическую прогрессию (в порядке следования слева направо), а в любом столбце — геометрическую прогрессию (в порядке следования сверху вниз). Докажите, что знаменатели всех этих геометрических прогрессий равны.\\
+ 
+\task При каком наименьшем натуральном $n$ существуют такие целые $a_{1}, a_{2} \dots a_{n}$, что уравнение $$x^{2} - 2(a_{1} + a_{2} + \dots + a_{n})^{2}x + (a_{1}^{4} + a_{2}^{4} + \dots + a_{n}^{4} + 1)$$ имеет по крайней мере один целый корень?\\
+
+\task Изначально на доске был записан $n+1$ одночлен: $1, \ x, \ x^{2} \dots x^{n}$. Договорившись заранее, $k$ мальчиков каждую минуту одновременно вычисляли сумму каких-то двух многочленов, написанных на доске, и результат дописывали на доску. Через $m$ минут на доске, среди прочих, были написаны многочлены $S_{1} = 1 + x, \ S_{2} = 1 + x + x^{2},  \dots S_{n} = 1 + x + \dots + x^{n}$. Докажите, что $m \geq \frac{2n}{k+1}$.\\
+
+\end{document}

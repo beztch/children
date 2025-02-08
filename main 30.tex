@@ -1,0 +1,97 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{кружок Взлет}} \hfill {20.05.2023}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem*{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{9 класс}{Ортологичность}
+	\bigskip
+	
+\task (Лемма Карно) Докажите, что отрезки $AB$ и $CD$ перпендикулярны тогда, и только года, когда $AC^{2} + BD^{2} = AD^{2} + BC^{2}$.\\
+
+\task (Теорема Карно) Докажите, что перпендикуляры из точек $A_{1}, B_{1}, C{1}$ на прямые $BC, AC, AB$ соответственно, пересекаются в одной точке тогда, и только тогда, когда $$AB_{1}^{2} - B_{1}C^{2} + CA_{1}^{2} - A_{1}B^{2} + BC_{1}^{2} - C_{1}A^{2} = 0$$.
+
+\task Даны точки $A_{1}$, $B_{1}$, $C_{1}$ и треугольник $ABC$. Докажите, что если перпендикуляры из точек $A_{1}$, $B_{1}$, $C_{1}$ на прямые $BC, AC, AB$ соответственно, пересекаются в одной точке, то перпендикуляры из точек $A, B, C$ на прямые $B_{1}C_{1}, A_{1}C_{1}, A_{1}B_{1}$ соответственно, тоже пересекаются в одной точке. \\
+
+\definition Будем называть треугольники $ABC$ и $A_{1}B_{1}C_{1}$ ортологичными, если перпендикуляры из вершин одного треугольника на стороны другого, соответственно, пересекаются в одной точке.\\
+
+\task На сторонах треугольника $ABC$ вне его построили равнобедренные треугольники $ABC_{1}$, $AB_{1}C$, $A_{1}BC$ ($AC_{1} = BC_{1}$ и т.д.). Докажите, что перпендикуляры к $B_{1}C_{1},$ $C_{1}A_{1}$, $A_{1}B_{1}$, проведенные через $A, B, C$ соответственно, пересекаются в одной точке.\\
+
+\task Рассмотрим точку $P$ внутри треугольника $ABC$ и ее проекции $P_{a}, P_{b}, P_{c}$ на прямые, содержащие стороны треугольника $ABC$. Через середину $P_{b}P_{c}$ проводится прямая $a$ перпендикулярно $BC$. Аналогично определяются прямые $b$ и $c$. Докажите, что они конкурентны. \\
+
+\task Докажите, что два равных противоположно ориентированных треугольника ортологичны.\\
+
+\task Даны три окружности $\omega_{1}$, $\omega_{2}$, $\omega_{3}$ с центрами $O_{1}$, $O_{2}$, $O_{3}$, не лежащими на одной прямой. К $\omega_{1}$ и $\omega_{2}$ проведена общая касательная, касающаяся их в точках $A_{1}$ и $A_{2}$. Пусть точка $B_{3}$ -- середина отрезка $A_{1}A_{2}$. Аналогично определяются точки $A_{i}$ $B_{j}$. Докажите, что перпендикуляр из $O_{1}$ на $B_{2}B_{3}$ и два аналогичных пересекаются в одной точке.\\
+
+\task Пусть $A_{1}$, $B_{1}$, $C{1}$ -- проекции вершин треугольника $ABC$ на прямую. Докажите, что перпендикуляр к $BC$ проведенный из $A_{1}$, перпендикуляр к $AC$ проведенный из $B_{1}$, перпендикуляр к $AB$ проведенный из $C_{1}$ пересекаются в одной точке. \\
+
+\task Внутри тругольника $ABC$ выбраны точки $P$ и $Q$. Пусть $P_{a}$ и $Q_{a}$ -- проекции точек $P$ и $Q$ на прямую $BC$. Аналогично определим $P_{b}$, $Q_{b}$, $P_{c}$ и $Q_{c}$. Известно, что центр описанной окружности $ABC$ лежит на прямой $PQ$. Докажите, что перпендикуляр из $P_{a}$ на $Q_{b}Q_{c}$, перпендикуляр из $P_{b}$ на $Q_{a}Q_{c}$ и перпендикуляр из $P_{c}$ на $Q_{a}Q_{b}$ пересекаются в одной точке.\\
+
+\end{document}

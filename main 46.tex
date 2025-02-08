@@ -1,0 +1,108 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{Взлет}} \hfill {17.03.2024}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem*{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{8 класс $\bullet$ 2 группа}{ТЧ степени вхождения}
+	\bigskip
+
+\task Докажите, что $n!$ не делится на $2^n.$\\
+
+\task Даны натуральные числа $a$ и $b$, причем $a < 1000$. Докажите, что если $a^21$ делится на $b^10$, то $a^2$ делится на $b$.\\
+
+\begin{definition}
+    Степенью вхождения простого числа $p$ в натуральное число $n$ будем называть наибольшее такое $k$, что $n$ делится на $p^k$. Обозначать для краткости будем $\nu_p(n)$ (это греческая буква “ню”)
+\end{definition}
+
+\task Докажите следующие свойства:
+\begin{itemize}
+    \item[a)] $\nu_p(ab) = \nu_p(a) + \nu_p(b)$
+    \item[b)] $\nu_p(a + b) \geq \min(\nu_p(a), \nu_p(b))$, причём если $\nu_p(a)  \not= \nu_p(b)$, то достигается равенство.
+\end{itemize}
+
+
+\task Натуральные числа $a$ и $b$ таковы, что сумма $\frac{b^2}{a} + \frac{a^2}{b}$ целая. Докажите, что оба слагаемых целые.\\
+
+\task Натуральные числа $m, n$ таковы, что $m^2 + n^2 + m$ кратно $mn$. Докажите, что $m$ — квадрат натурального числа.\\
+
+
+\task {\bf Формула Лежандра.} Докажите, что $$\nu_p(n!) = \bigg[ \frac{n}{p} \bigg] + \bigg[ \frac{n}{p^2} \bigg] + \bigg[ \frac{n}{p^3} \bigg] + \dots$$
+
+\task Докажите, что для любых натуральных $a_1 , a_2 \dots a_k$ число $$\frac{(a_1 + a_2 + \dots a_k)!}{a_1! a_2! \dots a_k!}$$ целое.\\
+
+\task Докажите, что наименьшее общее кратное чисел от $n$ до $2n + 1$
+\begin{itemize}
+    \item[a)] делится на $\frac{(2n + 1)!}{n!n!}$
+    \item[b)] больше $4^n$.
+\end{itemize}
+
+\task Предположим, что среди чисел от $1$ до $2n+1$ ровно $k$ простых. Докажите, что $(2n + 1)^k > 4^n$.\\
+\end{document}

@@ -1,0 +1,95 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{Взлет}} \hfill {06.05.2023}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{7 класс}{Игры}
+	\bigskip
+	
+\task а) Имеются две кучки по $10$ спичек. Двое по очереди берут спички, причём за один ход разрешается брать любое количество спичек, но только из одной кучки. Проигрывает тот, кто не может сделать ход. Кто выигрывает при правильной игре? 
+    
+б) А если в одной кучке $20$, а в другой
+$30$ спичек?\\
+
+\task Ваня и Леня по очереди двигают фишку, стоящую в начале полоски $1 \times 31$, на $1, 2$ или $3$ шага вправо. Проигрывает тот, у кого нет хода. Кто из игроков может обеспечить себе победу?\\
+
+\task Два игрока по очереди ставят на шахматную доску $8 \times 8$ слонов так, чтобы эти они не били друг друга. Проигрывает тот, кто не может сделать ход. Кто выигрывает при правильной игре?\\
+
+\task Двое по очереди разламывают шоколадку. За один ход разрешается сделать прямолинейный разлом любого из имеющихся кусков вдоль углубления. Проигрывает тот, кто первым отломит дольку $1 \times 1$. Кто выигрывает при правильной игре, если шоколадка имеет размеры а) $10 \times 10$; б) $10 \times 13$; в*) шоколадка $10 \times 13$, но первый получивший дольку $1 \times 1$ выигрывает.\\
+
+\task Петя и Вася играют в игру. У них есть $2020$ бананов. Сначала Вася распределяет бананы по трем кучам, в каждую хотя бы по одному банану. Затем они делают ходы по очереди, начинает Петя. За один ход можно взять из одной кучи $1$, $2$ или $3$ банана. Проигрывает не имеющий хода. Кто выигрывает при правильной игре?\\
+
+\task  а) В строчку написано несколько минусов. Два игрока по очереди переправляют один или два соседних минуса на плюс; выигрывает переправивший последний минус.
+
+б) Рассмотрите вариант предыдущей игры, в котором минусы написаны не в строчку, а стоят по кругу (и исправлять можно один или два стоящих рядом минуса)\\
+
+\task Двое играют на доске а)$2000 \times 22$ б)$2000 \times 23$ клеток. Каждый по очереди отмечает квадрат по линиям сетки (любого возможного размера) и закрашивает его. Выигрывает тот, кто закрасит последнюю клетку. Дважды закрашивать клетки нельзя. Кто выиграет при правильной игре и как надо играть?\\
+\end{document}

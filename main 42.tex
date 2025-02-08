@@ -1,0 +1,89 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{взлет онлайн}} \hfill {25.11.2023}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{8 класс}{Средняя линия 2}
+	\bigskip
+	
+\task С помощью циркуля и линейки постройте треугольник, если даны середины трёх его сторон. \\
+
+\task Разрежьте произвольный треугольник на три части, из которых можно сложить прямоугольник. \\
+
+\task а) Одна из сторон треугольника равна $a$. Найдите длину отрезка, соединяющего середины медиан, проведённых к двум другим сторонам. б) Докажите, что отрезок, соединяющий середины диагоналей трапеции, равен полуразности её оснований. в) Докажите, что средняя линия трапеции (то есть отрезок, со- единяющий середины её боковых сторон) параллельна её основаниям и равна их полусумме.\\
+
+\task Внутри произвольного угла взята точка $M$. С помощью циркуля и линейки проведите через точку $M$ прямую так, чтобы её отрезок, заключённый между сторонами угла, делился бы точкой $M$ пополам.
+\\
+
+\task На стороне $AC$ остроугольного треугольника $ABC$ выбрана точка $D$. Медиана $AM$ пересекает высоту $CH$ и отрезок $BD$ в точках $N$ и $K$ соответственно. 
+Докажите, что если  $AK = BK$,  то  $AN = 2KM$.\\
+
+\end{document}

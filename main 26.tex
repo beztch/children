@@ -1,0 +1,96 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{Взлет}} \hfill {26.01.2024}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{группа 9.1}{Тут Что, Конструктивы?}
+	\bigskip
+
+\task Докажите, что уравнение $x^2 + y^2 - z^2 = 2024$ имеет бесконечно много решений в целых числах.
+\\
+
+\task Существуют ли $100$ рациональных чисел таких, что произведение любых двух не является целым числом, а произведение любых трёх является целым?\\
+	
+\task Существует ли $10$ таких различных целых чисел, что сумма любых $9$ из них является полным квадратом?\\
+
+\task Существует ли арифметическая прогрессия $a_1, a_2, \dots , a_{2024}$ с ненулевой разностью такая, что каждый её член имеет вид $\frac{1}{n}$?\\
+
+\task Существуют ли три попарно различных ненулевых целых числа, сумма которых равна нулю, а сумма тринадцатых степеней которых является квадратом некоторого натурального числа?\\
+
+\task Существуют ли такие натуральные числа $a, b$ и $c$, что $a^2 - 1$ делится на $b$, $b^2 - 1$ делится на $c$ и $c^2 - 1$ делится на $a$, причем $a + b + c > 2024$?\\
+
+\task Существует ли такой набор из $1000$ различных натуральных чисел, что для любых двух чисел из набора их сумма делится на их разность?\\
+
+\task Числа m и n назовём похожими друг на друга, если у них совпадают множества простых делителей. Числа m и n назовём очень похожими, если во-первых, m и n похожи друг на друга, а во-вторых, m + 1 и n + 1 похожи друг на друга. Докажите, что пар очень похожих натуральных чисел бесконечно много.\\
+
+\task Существует ли такое натуральное $N$, что в любой возрастающей арифметической прогрессии, состоящей из $N$ натуральных чисел, найдется число, кратное некоторому простому больше $10000$?\\
+
+\end{document}

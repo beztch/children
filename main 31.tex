@@ -1,0 +1,94 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{5 лицей}} \hfill {07.12.2023}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{6 класс}{Оценка $+$ пример}
+	\bigskip
+	
+\task Какое наибольшее число трехклеточных уголков можно вырезать из клетча- того квадрата $8 \times 8$\\
+
+\task Сумма нескольких различных натуральных слагаемых равна $50$. Какое наи- большее число слагаемых может быть?\\
+
+\task На $22$ карточках написали числа от $1$ до $22$. Из этих карточек составили $11$ дробей. Какое наибольшее
+их количество может после сокращения оказаться целыми числами?\\
+
+\task В таблице $5 \times 5$ расставлены натуральные числа от $1$ до $25$. Оказалось, что в каждом столбце (сверху вниз) и в каждой строке (слева направо) числа идут в порядке возрастания. Найдите наименьшее возможное значение суммы чисел третьего столбца.\\
+
+\task Том Сойер взялся покрасить очень длинный забор, соблюдая условия: любые две доски, между которыми ровно две, ровно три или ровно пять досок, должны быть окрашены в разные цвета. Какое наименьшее количество красок потребуется Тому для этой работы?\\
+
+\task $8$ кузнецов должны подковать $10$ лошадей. Каждый кузнец тратит на одну подкову $5$ минут. Какое наименьшее время они должны потратить на работу? (Лошадь не может стоять на $2$ ногах)\\
+
+\task Сумма десяти натуральных чисел равна $1001$. Какое наибольшее значение может принимать НОД (наибольший общий делитель) этих чисел?\\
+
+\task Какое наибольшее количество кораблей $1 \times 2$ можно уложить на доске $10 \times 10$ без нарушения правил морского боя?\\
+
+\end{document}

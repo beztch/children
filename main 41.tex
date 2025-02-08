@@ -1,0 +1,83 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{Взлет МО}} \hfill {18.04.2023}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{8 класс}{Слепые алгоритмы. Добавка}
+	\bigskip
+	
+\task В одном из расположенных в ряд $100$ окопов спрятался вражеский робот. В каком – неизвестно. Ваша задача – уничтожить робота. У вас есть пушка, которую можно навести на любой окоп и произвести выстрел. Если робот находился в этом окопе, задача выполнена. Если же робот был в другом окопе, то он, пока дым от выстрела не рассеялся, незаметно от нас обязательно перебегает в один из соседних окопов. Можно ли выполнить боевую задачу?\\
+
+\task В таблице две строки и бесконечно много столбцов. В каждой строке и каждом столбце все числа различны. Докажите, что можно выбрать бесконечно много столбцов так, чтобы все числа в выбранных столбцах были различны.\\
+
+\task Дана бесконечная клетчатая плоскость. Учительница и $30$ ее учеников играют в игру: за один ход можно покрасить в черный любой единичный отрезок по линиям сетки. Учительница побеждает, если после хода кого-то из игроков есть прямоугольник $1 \times 2$ в котором покрашены все границы, а отрезок внутри -- нет. Докажите, что учительница сможет выйграть независимо от ходов всех соперников. (Игроки ходят по-очереди. Сначала учительница, потом по порядку все ученики).\\
+
+\end{document}

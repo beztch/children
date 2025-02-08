@@ -1,0 +1,89 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{сборы взлет}} \hfill {14.10.2023}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{7а класс}{Игры разнобой}
+	\bigskip
+	
+\task Двое игроков кладут одинаковые круглые монеты на прямоугольный стол; монеты могут свешиваться за край (но не должны падать) и не могут перекрываться. Кто не может положить монету, проигрывает. (Сдвигать ранее положенные монеты нельзя.)\\
+
+\task На столе лежит куча из n конфет. Двое по очереди берут конфеты из кучи. За один ход можно взять $1, 2$ или $10$ камней. Проигрывает тот, кто не может сделать ход. При каких n начинающий выигрывает?\\
+
+\task Два игрока забирают монеты из двух кучек, действуя по следующим правилам. Вначале первый игрок забирает себе из любой кучки несколько монет и перекладывает из этой кучки в другую такое же количество монет. Затем также поступает второй игрок (выбирая кучку, из которой он берет монеты, по своему усмотрению) и т.д. до тех пор, пока можно брать монеты по этим правилам. Игрок, взявший монеты последним, выигрывает. Кто из игроков имеет выигрышную стратегию, если кучки содержат (а) $20$ и $19$ монет (б) $20$ и $40$ монет\\
+
+\task На доске написано число $123456789$. Два игрока ходят по очереди. За один ход можно отнять от числа на доске любую его ненулевую цифру и записать результат на доску, а старое число стереть.
+а) Выигрывает тот, что получит $0$. Кто выигрывает при правильной игре? б) Проигрывает тот, кто получит ноль. Кто выигрывает при правильной игре?
+ \\
+
+\task Игра начинается с $60$. За ход разрешается уменьшить имеющееся число на любой из его делителей. Проигрывает тот, кто получит ноль\\
+
+\end{document}

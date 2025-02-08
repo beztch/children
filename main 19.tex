@@ -1,0 +1,109 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{онлайн Взлет}} \hfill {30.09.2023}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{10 класс}{Изогональное сопряжение}
+	\bigskip
+
+
+Рассмотрим остроугольный треугольник $ABC$ (для неостроугольного треугольника рассуждения немного меняются, но в целом остаются аналогичными). Возьмём внутри него точку P. Пусть прямая $l_{a}$ симметрична прямой AP относительно биссектрисы угла $BAC$. Аналогично определим прямые $l_{b}$ и $l_{c}$.
+\begin{theorem}
+    Прямые $l_{a}$, $l_{b}$ и $l_{c}$ пересекаются в одной точке.
+\end{theorem}
+	
+\task Пусть $Q$ — точка пересечения $l_{a}$ и $l_{b}$. Расмотрим описанную окружность $\omega$ треугольника $BQC$, а также вторую точку $T$ пересечения $l_{a}$ и $\omega$.
+Докажите Теорему, показав, что $\angle PCA = \angle BCQ$.\\
+
+\task Внутри треугольника $ABC$ отмечена точка $D$, а внутри треугольника $ABD$ — точка $E$. Оказалось, что $\angle BAE = \angle CBD, \ \angle EAD = \angle DBE, \ \angle DAC = \angle EBA$. Докажите, что точки $C, \ D, \ E$ лежат на одной прямой.\\
+
+\task Изогонально сопряженные точки имеют общую педальную окружность.\\
+
+\task Внутри остроугольного треугольника выбрана точка $Р$. $A_{1}B_{1}C_{1}$ – педальный треугольник точки $P$. Пусть точки $A_{2}, \ B_{2}, \ C_{2}$ – ортоцентры треугольников $AB_{1}C_{1}$ , $BA_{1}C_{1}$ и $CB_{1}A_{1}$ соответственно. Тогда прямые $A_{1}A_{2}, \ B_{1}B_{2}, \ C_{1}C_{2}$ пересекаются в одной точке.\\
+
+\begin{theorem}
+    Пусть $P$ – точка, лежащая внутри выпуклого четырехугольника $ABCD$. Для точки $P$ существует точка, изогонально сопряженная относительно $ABCD$, тогда и только тогда, когда $\angle APB + \angle CPD = 180^{\circ}$.
+\end{theorem}
+
+\task Докажите эквивалентность утверждений (можно сдавать следствия отдельно, например, $a \Rightarrow c$, но за это не более $1.5$ баллов. За целиком решенную задачу -- $2$ балла)
+\begin{enumerate}
+    \item[a)]  $\angle APB + \angle CPD = 180^{\circ}$
+    \item[b)] Проекции точки $P$ на прямые $AB, \ BC, \ CD, \ DA$ лежат на одной окружности.
+    \item[c)] Существует точка, изогонально сопряжённая точке P относительно ABCD.
+\end{enumerate}
+
+\task Выпуклый четырехугольник $ABCD$ описан около окружности с центром $I$. На отрезках $AI$ и $CI$ выбраны точки $P$ и $Q$ соответственно так,
+что $\angle PBQ = \frac{1}{2} \angle ABC$. Докажите, что $\angle PDQ = \frac{1}{2} \angle AC$\\
+
+\task  Пусть в остроугольном треугольнике $ABC$ точка $O$ – центр описанной окружности, $H$ – ортоцентр. Если $E$ и $F$ – точки пересечения срединного перпендикуляра к $BH$ с боковыми сторонами, то $OB$ – биссектриса
+$\angle EOF$.\\
+
+\end{document}

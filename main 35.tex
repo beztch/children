@@ -1,0 +1,93 @@
+\documentclass[a4paper,12pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage[mag=1000,a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,noheadfoot]{geometry}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb,amsthm,amscd,amsfonts,graphicx,epsfig,textcomp,wrapfig}
+\usepackage[dvips]{graphicx}
+\graphicspath{{noiseimages/}}
+
+\newcommand{\tab}{\hspace{10mm}}
+\newcommand{\name}{
+			\normalsize
+			{
+				\ \ \quad
+                \mbox{} \hfil {\flushleft{5 школа}} \hfill {21.09.2023}
+			%\quad
+			}
+			\vspace{5pt}\hrule
+		}
+
+\def\head#1#2{
+	\begin{center}{
+			\LARGE
+			\bf #2
+			
+			{\normalsize \bf #1}
+			\vspace{-10pt}
+	}\end{center}
+}
+
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\q}{}
+
+\newcounter{tasknum}
+\setcounter{tasknum}{0}
+\def\thetasknum{{\textbf{\arabic{tasknum}}}}
+\newcommand{\task}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{} \thetasknum\textbf{.}~}
+\newcommand{\coff}{\refstepcounter{tasknum}\vspace{2pt}\noindent \textbf{Задача} \thetasknum *\textbf{.}~}
+
+
+\newcommand{\eq}[1]{\underset{#1}{\equiv}}
+\newcommand{\dv}{\ensuremath{\mathop{\raisebox{-2pt}{\vdots}}}}
+\newcommand{\ndv}{\not \dv}
+
+\newcounter{exnum}
+\setcounter{exnum}{0}
+\def\theexnum{{\emph{\arabic{exnum}}}}
+\newcommand{\ex}{\refstepcounter{exnum}\vspace{2pt}\noindent \emph{Упражнение} \theexnum\emph{.}~}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Предложение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\textheight=250mm %
+\textwidth=180mm %
+\oddsidemargin=-10.4mm%
+\evensidemargin=-10.4mm %
+\topmargin=-24.4mm
+
+
+\begin{document}
+	\pagestyle{empty}
+    \name{}
+	\head{6 класс}{Как я провел лето}
+	\bigskip
+
+\task Давным давно островитянин Костя сказал своим друзьям: - Вчера мой сосед заявил мне, что он лжец! Кем является Костя — рыцарем или лжецом?\\
+
+\task Гирлянда, висящая вдоль школьного коридора, состоит из красных и синих лампочек. Рядом с каждой красной лампочкой обязательно есть синяя. Какое наибольшее число красных лампочек может быть в этой гирлянде, если всего лампочек $50$?\\
+ 
+\task На метеорологической станции работает $19$ сотрудников. В соответствии с Кодексом Метеоролога в каждый ясный день на дежурство должны выйти два сотрудника, а в каждый пасмурный -- $5$ сотрудников. Выяснилось, что за август каждый из сотрудников выходил на дежурство ровно $5$ раз. Сколько было ясных дней в августе?\\
+
+\task На доске записано $1012$ единиц и $1012$ нулей. За один ход Саша может либо стереть две одинаковые цифры и написать $0$, либо стереть две разные и написать $1$. Какая цифра останется через $2023$ хода?\\
+
+\task Среди $6$ монет есть две фальшивые, которые весят меньше настоящих. Как за три взвешивания на чашечных весах найти обе фальшивые монеты?\\
+
+\task Каких чисел среди первых $9999$ больше: тех, у которых сумма цифр $15$ или тех, у которых сумма цифр $21$?\\
+
+\task Имеется $4$ предмета попарно различного веса. Как за $5$ взвешиваний на чашечных весах расположить их в порядке возрастания массы?\\
+
+\task Федя и Никита играют в игру на шахматной доске. Сначала Федя ставит короля на любую клетку, а потом они по-очереди его двигают, начиная с Никиты. Проигрывает тот, кто пришел в клетку, в которой уже бывали до этого. У кого из игроков есть стратегия?\\
+
+\end{document}
